@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>ohyesnoyes</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <!-- <link href="https://stackpath.bootstrapcdn.com/bootswatch/4.1.1/flatly/bootstrap.min.css" rel="stylesheet" integrity="sha384-WuViQmTamrPyvMFZjf8te7HpKtdxuzV/HX1yG26a0d8yieIBr+beDf1ME99iX1cM" crossorigin="anonymous"> -->
+  <link rel="stylesheet" href="style.css">
+  <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  
+</head>
+<body data-spy="scroll" data-target=".navbar" data-offset="50">
+
+<nav class="navbar navbar-default navbar-fixed-top" >
+  <div class="container-fluid">
+    <div class="navbar-header">
+        <img src="images/jnlogo.png" style="width:32px; float:left;margin:10px 5px;" />
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar" >
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>                        
+      </button>
+      
+      <a class="navbar-brand" href="ohyesnoyes.com"><strong>ohyesnoyes</strong></a>
+    </div>
+    <div >
+      <div class="collapse navbar-collapse" id="myNavbar"  >
+        <ul class="nav navbar-nav">
+          <li><a href="#section1">Welcome</a></li>
+          <li><a href="#section2">About</a></li>
+          <li><a href="#section3">Services</a></li>
+          <li><a href="#section4">Pricing</a></li>
+          <li><a href="#section5">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<div id="section1" class="container-fluid">
+  <div class="jumbotron jumbotron-fluid">
+      <div class="container">
+          <h1 class="display-3">Welcome!</h1>
+          <p class="lead">This is the website of Jeremy Noyes</p>
+          <hr class="my-2">
+          <p>Join my monthly newsletter for updates.</p>
+          <p class="lead">
+            <input class="btn btn-primary btn-lg"  id="subscribe" name="subscribe" role="button"></input>
+          </p>
+
+          <div id="subscribeForm">
+            <form class="form">
+              <div class="form-group">
+                <label>Name:</label>
+                <input type='text' placeholder="Type your name" id="newsletterName" />
+              </div>
+              <div class="form-group">
+                <label>Email:</label>
+                <input type='email' placeholder="Type your email" id="newsletterEmail"/>
+              </div>
+              <div class="form-group">
+                  <div class="caption">*Are you sure you want to subscribe?</div>
+                </div>
+              <div class="btn-group btn-group-lg">
+                <button class="btn btn-danger" onclick="myFunction()">No</button>
+                <button class="btn btn-success" type="submit" onclick="subscribeToNewsletter()">Yes</button>
+              </div>
+              <div id="subscribeMessage"></div>
+            </form>
+          </div>
+      </div>
+
+       
+      
+  </div>
+</div>
+<div id="section2" class="container-fluid">
+  <h1>This is what I do</h1>
+  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis pharetra dui nec purus rhoncus, a ultricies dui commodo. Cras vehicula condimentum congue. Ut ornare eget enim id fringilla. Morbi scelerisque tempor ipsum, vel tempor tellus pulvinar quis. Nulla pulvinar, magna sit amet accumsan lobortis, ante ex vulputate lacus, in faucibus magna nibh vehicula nibh. Aliquam id elementum ex. Mauris rhoncus iaculis enim, ut sagittis risus molestie in.</p> 
+  <p>Cras vitae risus faucibus, congue diam ut, mattis ante. Vivamus nec nisl eget lacus mattis sollicitudin. Nunc a neque laoreet, convallis sem quis, feugiat sem. Nam dignissim, augue ultrices vestibulum pellentesque, elit risus luctus augue, eget eleifend ligula mauris at neque. In vitae nibh pellentesque, dapibus metus ut, feugiat nisl. Vivamus porta turpis convallis, congue libero sed, feugiat odio. Ut nec gravida ligula. Donec laoreet luctus ante. Vestibulum ultrices sagittis urna, quis ultrices risus pharetra ornare. Fusce convallis tellus id blandit rutrum. Duis pharetra dictum nisi et laoreet.</p>
+  <p>Maecenas eget mollis enim. Mauris viverra risus eleifend, euismod leo id, viverra urna. Integer eget tellus gravida, pharetra nibh sit amet, mattis est. Vivamus volutpat, ligula vel lacinia lacinia, massa nibh elementum dui, et aliquam nulla diam vitae diam. Ut hendrerit rutrum placerat. In hac habitasse platea dictumst. Etiam sollicitudin quam eget risus condimentum bibendum at nec nisi. Duis diam ante, tincidunt at convallis eu, rhoncus ut ante. Nam urna ligula, viverra vel eros eget, viverra dictum tellus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. In egestas ex neque, vitae consequat turpis lobortis quis.</p>
+  <p>Ut id justo in arcu pharetra vulputate vitae ut erat. Praesent id tellus id orci efficitur sollicitudin. Vivamus urna ante, molestie et mi ac, ultrices euismod felis. Etiam laoreet orci efficitur bibendum tempor. Quisque non tincidunt lectus. Suspendisse ut libero malesuada lorem elementum porta quis lobortis neque. Vestibulum vitae rutrum nunc, vel congue eros. Duis iaculis ultricies felis. Nunc gravida, enim sodales placerat sollicitudin, magna leo hendrerit dui, et pulvinar sapien turpis pharetra nibh.</p>
+  <p>Morbi in blandit lacus, quis mollis nunc. Donec in hendrerit mi. Praesent tellus sapien, elementum eget tortor eu, tempus interdum lacus. Mauris ac dolor vel lacus ullamcorper tempor. Etiam non leo a enim commodo lacinia sit amet non metus. Nunc libero justo, tincidunt nec feugiat ut, cursus a tellus. Vestibulum mattis eu est placerat molestie. </p>
+  
+</div>
+<div id="section3" class="container-fluid">
+  <h1>This is how I do it</h1>
+  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis pharetra dui nec purus rhoncus, a ultricies dui commodo. Cras vehicula condimentum congue. Ut ornare eget enim id fringilla. Morbi scelerisque tempor ipsum, vel tempor tellus pulvinar quis. Nulla pulvinar, magna sit amet accumsan lobortis, ante ex vulputate lacus, in faucibus magna nibh vehicula nibh. Aliquam id elementum ex. Mauris rhoncus iaculis enim, ut sagittis risus molestie in.</p> 
+  <p>Cras vitae risus faucibus, congue diam ut, mattis ante. Vivamus nec nisl eget lacus mattis sollicitudin. Nunc a neque laoreet, convallis sem quis, feugiat sem. Nam dignissim, augue ultrices vestibulum pellentesque, elit risus luctus augue, eget eleifend ligula mauris at neque. In vitae nibh pellentesque, dapibus metus ut, feugiat nisl. Vivamus porta turpis convallis, congue libero sed, feugiat odio. Ut nec gravida ligula. Donec laoreet luctus ante. Vestibulum ultrices sagittis urna, quis ultrices risus pharetra ornare. Fusce convallis tellus id blandit rutrum. Duis pharetra dictum nisi et laoreet.</p>
+  <p>Maecenas eget mollis enim. Mauris viverra risus eleifend, euismod leo id, viverra urna. Integer eget tellus gravida, pharetra nibh sit amet, mattis est. Vivamus volutpat, ligula vel lacinia lacinia, massa nibh elementum dui, et aliquam nulla diam vitae diam. Ut hendrerit rutrum placerat. In hac habitasse platea dictumst. Etiam sollicitudin quam eget risus condimentum bibendum at nec nisi. Duis diam ante, tincidunt at convallis eu, rhoncus ut ante. Nam urna ligula, viverra vel eros eget, viverra dictum tellus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. In egestas ex neque, vitae consequat turpis lobortis quis.</p>
+  <p>Ut id justo in arcu pharetra vulputate vitae ut erat. Praesent id tellus id orci efficitur sollicitudin. Vivamus urna ante, molestie et mi ac, ultrices euismod felis. Etiam laoreet orci efficitur bibendum tempor. Quisque non tincidunt lectus. Suspendisse ut libero malesuada lorem elementum porta quis lobortis neque. Vestibulum vitae rutrum nunc, vel congue eros. Duis iaculis ultricies felis. Nunc gravida, enim sodales placerat sollicitudin, magna leo hendrerit dui, et pulvinar sapien turpis pharetra nibh.</p>
+  <p>Morbi in blandit lacus, quis mollis nunc. Donec in hendrerit mi. Praesent tellus sapien, elementum eget tortor eu, tempus interdum lacus. Mauris ac dolor vel lacus ullamcorper tempor. Etiam non leo a enim commodo lacinia sit amet non metus. Nunc libero justo, tincidunt nec feugiat ut, cursus a tellus. Vestibulum mattis eu est placerat molestie. </p>
+  
+</div>
+<div id="section4" class="container-fluid">
+  <h1>This is how much it costs</h1>
+  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis pharetra dui nec purus rhoncus, a ultricies dui commodo. Cras vehicula condimentum congue. Ut ornare eget enim id fringilla. Morbi scelerisque tempor ipsum, vel tempor tellus pulvinar quis. Nulla pulvinar, magna sit amet accumsan lobortis, ante ex vulputate lacus, in faucibus magna nibh vehicula nibh. Aliquam id elementum ex. Mauris rhoncus iaculis enim, ut sagittis risus molestie in.</p> 
+  <p>Cras vitae risus faucibus, congue diam ut, mattis ante. Vivamus nec nisl eget lacus mattis sollicitudin. Nunc a neque laoreet, convallis sem quis, feugiat sem. Nam dignissim, augue ultrices vestibulum pellentesque, elit risus luctus augue, eget eleifend ligula mauris at neque. In vitae nibh pellentesque, dapibus metus ut, feugiat nisl. Vivamus porta turpis convallis, congue libero sed, feugiat odio. Ut nec gravida ligula. Donec laoreet luctus ante. Vestibulum ultrices sagittis urna, quis ultrices risus pharetra ornare. Fusce convallis tellus id blandit rutrum. Duis pharetra dictum nisi et laoreet.</p>
+  <p>Maecenas eget mollis enim. Mauris viverra risus eleifend, euismod leo id, viverra urna. Integer eget tellus gravida, pharetra nibh sit amet, mattis est. Vivamus volutpat, ligula vel lacinia lacinia, massa nibh elementum dui, et aliquam nulla diam vitae diam. Ut hendrerit rutrum placerat. In hac habitasse platea dictumst. Etiam sollicitudin quam eget risus condimentum bibendum at nec nisi. Duis diam ante, tincidunt at convallis eu, rhoncus ut ante. Nam urna ligula, viverra vel eros eget, viverra dictum tellus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. In egestas ex neque, vitae consequat turpis lobortis quis.</p>
+  <p>Ut id justo in arcu pharetra vulputate vitae ut erat. Praesent id tellus id orci efficitur sollicitudin. Vivamus urna ante, molestie et mi ac, ultrices euismod felis. Etiam laoreet orci efficitur bibendum tempor. Quisque non tincidunt lectus. Suspendisse ut libero malesuada lorem elementum porta quis lobortis neque. Vestibulum vitae rutrum nunc, vel congue eros. Duis iaculis ultricies felis. Nunc gravida, enim sodales placerat sollicitudin, magna leo hendrerit dui, et pulvinar sapien turpis pharetra nibh.</p>
+  <p>Morbi in blandit lacus, quis mollis nunc. Donec in hendrerit mi. Praesent tellus sapien, elementum eget tortor eu, tempus interdum lacus. Mauris ac dolor vel lacus ullamcorper tempor. Etiam non leo a enim commodo lacinia sit amet non metus. Nunc libero justo, tincidunt nec feugiat ut, cursus a tellus. Vestibulum mattis eu est placerat molestie. </p>
+</div>
+<div id="section5" class="container-fluid">
+  <h1>Contact me</h1>
+  <div class="flex-container">
+    <div class="flex-item"> 
+      <form class="form-horizontal" action="">
+          <div class="form-group">
+              <label class="control-label col-sm-2" for="name">Name:</label>
+              <div class="col-sm-10">
+                  <input type="text" name="name" class="small" required>
+              </div>
+          </div>
+          <div class="form-group">
+            <label class="control-label col-sm-2" for="email">Email:</label>
+            <div class="col-sm-10">
+              <input type="email" name="email" required>
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="control-label col-sm-2" for="comment">Comment:</label>
+            <div class="col-sm-10">
+              <textarea name="comment" rows="5" cols="40"></textarea>
+            </div>
+          </div>
+          <div class="form-group">
+            <div class="col-sm-offset-2 col-sm-10">
+              <button type="submit" class="btn btn-success">Submit</button>
+            </div>
+          </div>
+      </form> 
+    </div>
+    <div class="flex-item">
+        <div class="btn-group-vertical">
+            <a type="button" class="btn btn-primary" href="http://linkedin.com/in/jeremymnoyes" target="_blank">
+              <i class="fa fa-linkedin"></i>LinkedIn
+            </a>
+            <a type="button" class="btn btn-primary" href="http://twitter.com/ohyesnoyes" target="_blank">
+              <i class="fa fa-twitter"></i>Twitter
+            </a>
+            <a type="button" class="btn btn-primary" href="http://instagram.com/ohyesnoyes" target="_blank">
+              <i class="fa fa-instagram"></i>Instagram
+            </a>
+            <a type="button" class="btn btn-primary" href="http://github.com/ohyesnoyes" target="_blank">
+              <i class="fa fa-github"></i>Github
+            </a>
+        </div>
+    </div>
+    <div class="flex-item" id="map" style="width:300px;height:300px"></div>
+  </div>
+  
+  <script>
+      function myMap() {
+        var mapOptions = {
+          center: new google.maps.LatLng(43.618710, -116.214607),
+          zoom: 10,
+          mapTypeId: google.maps.MapTypeId.ROADMAP
+        }
+      var map = new google.maps.Map(document.getElementById("map"), mapOptions);
+      }
+    </script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyChVKi2HPZYb691NQ_GPr6g6dZl05uWqFI&callback=myMap"></script>
+  </div>
+
+  <script src="./main.js"></script>
+</body>
+</html>

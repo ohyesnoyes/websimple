@@ -1,0 +1,55 @@
+body {
+    position: relative; 
+}
+
+label {
+    margin:5px;
+}
+#section1 {padding-top:75px;height:inherit;color: #eee; background-color: #183170;}
+#section2 {padding-top:50px;height:inherit;color: #eee; background-color: #2E4172;}
+#section3 {padding-top:50px;height:inherit;color: #eee; background-color: #455274;}
+#section4 {padding-top:50px;height:inherit;color: #eee; background-color: #5C6376;}
+#section5 {padding-top:50px;height:inherit;color: #2E4172; background-color: #ddd;}
+
+.jumbotron {
+    background-color: #ddd;
+    color:#2E4172;
+    height:auto;
+}
+ 
+.card{
+    flex-wrap: wrap;
+    width: 40rem;
+    background-color: #455274;
+    border-radius: 10px;
+    margin:5px;
+    padding:5px;
+}
+
+.flex-container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.flex-item {
+    width:40rem;
+    margin:10px;
+    padding:10px;
+}
+
+.fa {
+    margin: 5px;
+}
+
+.list-group {
+    width: 150px;
+}
+.list-group-item a {
+    color:#2E4172;
+    
+}
+.list-group-item a:hover {
+    color:#5C6376;
+    text-decoration: none;
+}
+  
