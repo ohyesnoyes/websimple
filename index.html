@@ -56,19 +56,19 @@
             <form class="form">
               <div class="form-group">
                 <label>Name:</label>
-                <input type='text' placeholder="Type your name" id="newsletterName" />
+                <input type='text' placeholder="Type your name" id="newsletterName" required />
               </div>
               <div class="form-group">
                 <label>Email:</label>
-                <input type='email' placeholder="Type your email" id="newsletterEmail" />
+                <input type='email' placeholder="Type your email" id="newsletterEmail" required/>
               </div>
               <div class="form-group">
                   <div class="caption">Are you sure you want to subscribe?</div>
-                  <div style="color:red;"><i>*Feature coming soon...</i></div>
+
                 </div>
               <div class="btn-group btn-group-lg">
-                <button class="btn btn-danger" onclick="myFunction()">No</button>
-                <button class="btn btn-success" type="submit" onclick="subscribeToNewsletter()" disabled>Yes</button>
+                <button class="btn btn-danger" onclick="cancelSubscribe()">No</button>
+                <button class="btn btn-success" type="submit" onclick="subscribeToNewsletter()">Yes</button>
               </div>
               <div id="subscribeMessage"></div>
             </form>
@@ -182,6 +182,9 @@
     <div class="flex-item" id="map" ></div>
   </div>
   
+  <script src="https://www.gstatic.com/firebasejs/5.0.3/firebase.js"></script>
+ 
+
   <script>
       function myMap() {
         var mapOptions = {
@@ -195,6 +198,7 @@
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyChVKi2HPZYb691NQ_GPr6g6dZl05uWqFI&callback=myMap"></script>
   </div>
 
+  
   <script src="./main.js"></script>
 </body>
 </html>
