@@ -10,42 +10,25 @@
   firebase.initializeApp(config);
   var database = firebase.database();
 
+  /************** */
   
 
-  function subscribeToNewsletter () {
-  
-  var newsletterUser = database.ref('newsletterUser/');
-  
-    var user = {
-    name: document.getElementById('newsletterName').value,
-    email: document.getElementById('newsletterEmail').value
-    };
-    newsletterUser.push(user);
+  $('#btnSubscribe').click(function subscribeToNewsletter () {
+    
+    var newsletterUser = database.ref('newsletterUser/');
+    
+        var user = {
+        name: $('#newsletterName').val(),
+        email: $('#newsletterEmail').val()
+        };
+        // $('#subscribeMessage').show().slideDown(1000).delay(3000).slideUp();
+        newsletterUser.push(user);
+        $('#subscribeForm').hide(250);
+        console.log('User added');
+  });
 
-  console.log('User added');
-  // isSubscribed = true;
-  // users.push(user);
-  
-  }
+$('#subscribe').val('Subscribe');
+$('#subscribeForm').hide();
 
-function cancelSubscribe (){
-    subscribeForm.style.display = "none";
-}
-
-const subscribe = document.getElementById('subscribe');
-subscribe.value = "Subscribe";
-subscribe.style.backgroundColor = "#455274";
-const subscribeForm = document.getElementById('subscribeForm');
-subscribeForm.style.display = "none";
-
-subscribe.addEventListener('click', () => {
-     if (subscribeForm.style.display === "none"){
-        subscribeForm.style.display = "block";
-        subscribe.style.backgroundColor = "darkRed";
-        subscribe.value = "Close";
-    } else {
-        subscribeForm.style.display = "none";
-        subscribe.style.backgroundColor = "#455274";
-        subscribe.value = "Subscribe";
-    }
-});
+$('#btnCancelSubscribe').click( () => $('#subscribeForm').hide());
+$('#subscribe').click( () => $('#subscribeForm').toggle(250));
