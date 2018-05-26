@@ -32,7 +32,7 @@
   <div class="container-fluid">
     <div class="navbar-header">
         <img src="images/jnlogo.png" style="width:32px; float:left;margin:10px 5px;" />
-        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar" >
+        <button id="btnMenu" type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar" >
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>                        
@@ -43,11 +43,11 @@
     <div >
       <div class="collapse navbar-collapse" id="myNavbar"  >
         <ul class="nav navbar-nav">
-          <li><a href="#section1">Welcome</a></li>
-          <li><a href="#section2">About</a></li>
-          <li><a href="#section3">Services</a></li>
-          <li><a href="#section4">Pricing</a></li>
-          <li><a href="#section5">Contact</a></li>
+          <li><a class='menuItem' href="#section1">Welcome</a></li>
+          <li><a class='menuItem' href="#section2">About</a></li>
+          <li><a class='menuItem' href="#section3">Services</a></li>
+          <li><a class='menuItem' href="#section4">Pricing</a></li>
+          <li><a class='menuItem' href="#section5">Contact</a></li>
         </ul>
       </div>
     </div>
@@ -60,8 +60,7 @@
           <h1 class="display-3">Let's do this!</h1>
           <p class="lead">Welcome to the website of Jeremy M Noyes.</p>
           <hr class="my-2">
-          <p>Join my monthly newsletter for awesome updates, filled with poetry and musings.</p>
-          <div id="subscribeMessage" hidden>congrats</div>
+          <p class="ctaMessage"></p>
           <p class="lead">
             <input type="button" class="btn btn-info btn-lg"  id="subscribe" name="subscribe" role="button"></input>
           </p>
@@ -69,12 +68,17 @@
           <div id="subscribeForm">
             <form class="form">
               <div class="form-group">
-                <label>Name:</label>
-                <input type='text' placeholder="Type your name" id="newsletterName" required />
+                <label>First Name:</label>
+                <input type='text' id="newsletterFirstName" required />
               </div>
               <div class="form-group">
+                  <label>Last Name:</label>
+                  <input type='text' id="newsletterLastName" required />
+              </div>
+              
+              <div class="form-group">
                 <label>Email:</label>
-                <input type='email' placeholder="Type your email" id="newsletterEmail" required/>
+                <input type='email' id="newsletterEmail" required/>
               </div>
               <div class="form-group">
                   <div class="caption">Are you sure you want to subscribe?</div>
@@ -107,31 +111,31 @@
       <div class="carousel-inner" role="listbox">
   
         <div class="item active">
-          <img src="./images/dev_460x345.jpg" alt="development" width="460" height="345">
+          <img class="carouselImage" src="./images/dev_460x345.jpg" alt="development" width="460" height="345">
           <div class="carousel-caption">
             <h3>Web and Game Development</h3>
             <p>Do you need a web application built or have an idea for a fun video game?</p>
             <p>I want to work with you. Contact me to schedule an appointment </p>
-            <p><a class="btn btn-info" type="button" role="button" href="#section5">Contact Me</a></p>
+            <p><a class="btn btn-info carouselBtn" type="button" role="button" href="#section5">Contact Me</a></p>
           </div>
         </div>
   
         <div class="item">
-          <img src="./images/branding_460x345.jpg" alt="branding" width="460" height="345">
+          <img class="carouselImage" src="./images/branding_460x345.jpg" alt="branding" width="460" height="345">
           <div class="carousel-caption">
             <h3>Branding</h3>
             <p>I want to help you sell your brand and reach your business's full potential!</p>
             <p>Things I will help you improve: name, online image, logo, commercials, etc.</p>
-            <p><a class="btn btn-info" type="button" role="button" href="#section5">Contact Me</a></p>
+            <p><a class="btn btn-info carouselBtn" type="button" role="button" href="#section5">Contact Me</a></p>
           </div>
         </div>
       
         <div class="item">
-          <img src="./images/writing_460x345.jpg" alt="writing" width="460" height="345">
+          <img class="carouselImage" src="./images/writing_460x345.jpg" alt="writing" width="460" height="345">
           <div class="carousel-caption">
             <h3>Writing</h3>
             <p>If you need a write-up for your website, mission statement, random poem, or anything of that nature, I want to be that voice for you.</p>
-            <p><a class="btn btn-info" type="button" role="button" href="#section5">Contact Me</a></p>
+            <p><a class="btn btn-info carouselBtn" type="button" role="button" href="#section5">Contact Me</a></p>
           </div>
         </div>
     
@@ -166,39 +170,41 @@
   <p>Ut id justo in arcu pharetra vulputate vitae ut erat. Praesent id tellus id orci efficitur sollicitudin. Vivamus urna ante, molestie et mi ac, ultrices euismod felis. Etiam laoreet orci efficitur bibendum tempor. Quisque non tincidunt lectus. Suspendisse ut libero malesuada lorem elementum porta quis lobortis neque. Vestibulum vitae rutrum nunc, vel congue eros. Duis iaculis ultricies felis. Nunc gravida, enim sodales placerat sollicitudin, magna leo hendrerit dui, et pulvinar sapien turpis pharetra nibh.</p>
   <p>Morbi in blandit lacus, quis mollis nunc. Donec in hendrerit mi. Praesent tellus sapien, elementum eget tortor eu, tempus interdum lacus. Mauris ac dolor vel lacus ullamcorper tempor. Etiam non leo a enim commodo lacinia sit amet non metus. Nunc libero justo, tincidunt nec feugiat ut, cursus a tellus. Vestibulum mattis eu est placerat molestie. </p>
 </div>
-<div id="section5" class="container-fluid">
-  <h1>Contact me</h1>
+<footer id="section5" align="center" class="container-fluid">
+  <h1><u>Contact Me</u></h1>
   <div class="flex-container">
     <div class="flex-item"> 
-      <form class="form-horizontal" action="">
-        <legend>Fill this out:</legend>
-        <div style="color:red;"><i>*Feature coming soon...</i></div>
+      <form class="form-horizontal" id="commentForm">
           <div class="form-group">
-              <label class="control-label col-sm-2" for="name">Name:</label>
-              <div class="col-sm-10">
-                  <input type="text" name="name" class="small" required>
-              </div>
+            <label class="control-label col-sm-2" for="name">First:</label>
+            <input id="commentFirstName" type="text" name="name" class="small col-sm-8" required>
+          </div>
+          <div class="form-group">
+            <label class="control-label col-sm-2" for="name">Last:</label>
+            <input id="commentLastName" type="text" name="name" class="small col-sm-8" required>
           </div>
           <div class="form-group">
             <label class="control-label col-sm-2" for="email">Email:</label>
-            <div class="col-sm-10">
-              <input type="email" name="email" required>
-            </div>
+            <input id="commentEmail" type="email" name="email" class="small col-sm-8" required>
           </div>
           <div class="form-group">
-            <label class="control-label col-sm-2" for="comment">Comment:</label>
-            <div class="col-sm-10">
-              <textarea name="comment" rows="5" cols="40"></textarea>
-            </div>
+            <label class="control-label col-sm-2" for="comment">Text:</label>
+            <textarea id="comment" name="comment" rows="5" cols="40" class="col-sm-8"></textarea>
           </div>
           <div class="form-group">
             <div class="col-sm-offset-2 col-sm-10">
-              <button type="submit" class="btn btn-success" disabled>Submit</button>
+              <button id="btnComment" class="btn btn-success">Submit</button>
             </div>
           </div>
       </form> 
     </div>
     <div class="flex-item">
+        <address>
+            <strong>ohyesnoyes llc</strong><br>
+              Boise, ID<br>
+              (555) 555-5555<br>
+              <a href="mailto:admin@ohyesnoyes.com" style="color:orange;text-decoration: none;">admin@ohyesnoyes.com</a><br>
+            </address>
         <div class="btn-group-vertical">
             <a type="button" class="btn btn-primary" href="http://linkedin.com/in/jeremymnoyes" target="_blank">
               <i class="fab fa-linkedin"></i><p>LinkedIn</p> 
@@ -214,30 +220,16 @@
             </a>
         </div>
     </div>
-    <div class="flex-item" id="map" ></div>
   </div>
-  
+</footer>
+
   <script src="https://www.gstatic.com/firebasejs/5.0.3/firebase.js"></script>
- 
-
-  <script>
-      function myMap() {
-        var mapOptions = {
-          center: new google.maps.LatLng(43.618710, -116.214607),
-          zoom: 10,
-          mapTypeId: google.maps.MapTypeId.ROADMAP
-        }
-      var map = new google.maps.Map(document.getElementById("map"), mapOptions);
-      }
-    </script>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyChVKi2HPZYb691NQ_GPr6g6dZl05uWqFI&callback=myMap"></script>
-  </div>
-
   <script src="jquery-3.3.1.min.js"></script>
   <script 
         src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" 
         integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" 
         crossorigin="anonymous"></script>
   <script src="./main.js"></script>
+
 </body>
 </html>

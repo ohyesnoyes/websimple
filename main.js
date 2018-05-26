@@ -11,27 +11,41 @@
   var database = firebase.database();
 
   /************** */
-  
-
-  $('#btnSubscribe').click(function subscribeToNewsletter () {
+$('.ctaMessage').append('Join my monthly newsletter for awesome updates, filled with poetry and musings.') 
+/***** subscribe form ********* */
+$('#btnSubscribe').click(function subscribeToNewsletter () {
     
     var newsletterUser = database.ref('newsletterUser/');
-    
+        const date = new Date;
+
         var user = {
-        name: $('#newsletterName').val(),
-        email: $('#newsletterEmail').val()
+        firstName: $('#newsletterFirstName').val(),
+        lastName: $('#newsletterLastName').val(),
+        email: $('#newsletterEmail').val(),
+        date: date.toLocaleDateString()
         };
         // $('#subscribeMessage').show().slideDown(1000).delay(3000).slideUp();
         newsletterUser.push(user);
         $('#subscribeForm').hide(250);
         console.log('User added');
-  });
+});
 
 $('#subscribe').val('Subscribe');
 $('#subscribeForm').hide();
 
 $('#btnCancelSubscribe').click( () => $('#subscribeForm').hide());
-$('#subscribe').click( () => $('#subscribeForm').toggle(250));
+$('#subscribe').click( function () {
+    $('#subscribeForm').toggle(250);
+    $('#subscribe').toggleClass('btn-danger');
+   
+    if ($(this).val() == 'Subscribe') {
+        $(this).val("Close");
+    }
+    else {
+        $(this).val('Subscribe');
+    }
+     
+});
 
 /***** What I Do section ********/
 $(document).ready(function(){
@@ -56,4 +70,22 @@ $(document).ready(function(){
     $(".right").click(function(){
         $("#myCarousel").carousel("next");
     });
+});
+
+
+$('#btnComment').click(()=> {
+    
+    var comment = database.ref('comments/');
+        const date = new Date;
+
+        var user = {
+        firstName: $('#commentFirstName').val(),
+        lastName: $('#commentLastName').val(),
+        email: $('#commentEmail').val(),
+        comment: $('#comment').val(),
+        date: date.toLocaleDateString()
+        };
+        // $('#subscribeMessage').show().slideDown(1000).delay(3000).slideUp();
+        comment.push(user);
+        console.log('Comment added');
 });
