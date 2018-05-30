@@ -59,25 +59,25 @@
       <div class="container">
           <h1 class="display-3">Let's do this!</h1>
           <p class="lead">Welcome to the website of Jeremy M Noyes.</p>
-          <hr class="my-2">
+          
           <p class="ctaMessage"></p>
           <p class="lead">
             <input type="button" class="btn btn-info btn-lg"  id="subscribe" name="subscribe" role="button"></input>
           </p>
           
           <div id="subscribeForm">
-            <form class="form">
+            <section class="form">
               <div class="form-group">
-                <label>First Name:</label>
+                <label class="control-label">First Name:</label>
                 <input type='text' id="newsletterFirstName" required />
               </div>
               <div class="form-group">
-                  <label>Last Name:</label>
+                  <label class="control-label">Last Name:</label>
                   <input type='text' id="newsletterLastName" required />
               </div>
               
               <div class="form-group">
-                <label>Email:</label>
+                <label class="control-label">Email:</label>
                 <input type='email' id="newsletterEmail" required/>
               </div>
               <div class="form-group">
@@ -89,7 +89,7 @@
                 <button class="btn btn-success" id="btnSubscribe">Yes</button>
               </div>
               
-            </form>
+            </section>
           </div>
       </div>
 
@@ -99,59 +99,61 @@
 </div>
 <div id="section2" class="container-fluid">
   <h1>This is what I do <i class="fas fa-arrow-right"></i></h1>
-  <div id="myCarousel" class="carousel slide">
-      <!-- Indicators -->
-      <ol class="carousel-indicators">
-        <li class="item1 active"></li>
-        <li class="item2"></li>
-        <li class="item3"></li>
-      </ol>
-  
-      <!-- Wrapper for slides -->
-      <div class="carousel-inner" role="listbox">
-  
-        <div class="item active">
-          <img class="carouselImage" src="./images/dev_460x345.jpg" alt="development" width="460" height="345">
-          <div class="carousel-caption">
-            <h3>Web and Game Development</h3>
-            <p>Do you need a web application built or have an idea for a fun video game?</p>
-            <p>I want to work with you. Contact me to schedule an appointment </p>
-            <p><a class="btn btn-info carouselBtn" type="button" role="button" href="#section5">Contact Me</a></p>
+    <div class="flex-container">
+      <div class="flex-item">
+        <a class="card-link" href="#section5">
+        <div class="card" >
+          <img class="card-img-top" src="./images/dev_460x345.jpg" alt="development" width="460" height="345">
+          <div class="card-body">
+            <h4 class="card-title">Web and Game Development</h4>
+            <p class="card-text">Do you need a web application built or have an idea for a fun video game?
+              I want to work with you. Contact me to schedule an appointment.  </p>
+            <p>See my code on Github: 
+              <a type="button" class="btn btn-warning" href="http://github.com/ohyesnoyes" target="_blank">
+                <i class="fab fa-github"></i>
+              </a>
+            </p>
           </div>
         </div>
-  
-        <div class="item">
-          <img class="carouselImage" src="./images/branding_460x345.jpg" alt="branding" width="460" height="345">
-          <div class="carousel-caption">
-            <h3>Branding</h3>
-            <p>I want to help you sell your brand and reach your business's full potential!</p>
-            <p>Things I will help you improve: name, online image, logo, commercials, etc.</p>
-            <p><a class="btn btn-info carouselBtn" type="button" role="button" href="#section5">Contact Me</a></p>
-          </div>
-        </div>
-      
-        <div class="item">
-          <img class="carouselImage" src="./images/writing_460x345.jpg" alt="writing" width="460" height="345">
-          <div class="carousel-caption">
-            <h3>Writing</h3>
-            <p>If you need a write-up for your website, mission statement, random poem, or anything of that nature, I want to be that voice for you.</p>
-            <p><a class="btn btn-info carouselBtn" type="button" role="button" href="#section5">Contact Me</a></p>
-          </div>
-        </div>
-    
+        </a>
       </div>
-  
-      <!-- Left and right controls -->
-      <a class="left carousel-control" href="#myCarousel" role="button">
-        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-        <span class="sr-only">Previous</span>
-      </a>
-      <a class="right carousel-control" href="#myCarousel" role="button">
-        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-        <span class="sr-only">Next</span>
-      </a>
+      <div class="flex-item">
+        <a class="card-link" href="#section5">
+        <div class="card">
+          <img class="card-img-top" src="./images/branding_460x345.jpg" alt="branding" width="460" height="345">
+          <div class="card-body">
+            <h4 class="card-title">Branding</h4>
+            <p class="card-text">I want to help you sell your brand and reach your business's full potential!
+                Things I will help you improve: name, online image, logo, commercials, etc.</p>
+          </div>
+        </div>
+        </a>
+      </div>
+      <div class="flex-item">
+        <a class="card-link" href="#section5">
+        <div class="card">
+          <img class="card-img-top" src="./images/writing_460x345.jpg" alt="writing" width="460" height="345">
+          <div class="card-body">
+            <h4 class="card-title">Writing</h4>
+            <p class="card-text">If you need a write-up for your website, mission statement, random poem, or anything of that nature, I want to be that voice for you.</p>
+          </div>
+        </div>
+        </a>
+      </div>
+      <div class="flex-item">
+          <a class="card-link" href="http://www.euphonoyes.com/">
+          <div class="card">
+            <img class="card-img-top" src="./images/blog_460x345.jpg" alt="writing" width="460" height="345">
+            <div class="card-body">
+              <h4 class="card-title">Blog</h4>
+              <p class="card-text">Scope out my blog to get a feel for some of my work.</p>
+            </div>
+          </div>
+          </a>
+        </div>
     </div>
- 
+    
+     
 </div>
 <div id="section3" class="container-fluid">
   <h1>This is how I do it <i class="fas fa-arrow-right"></i></h1>
@@ -172,38 +174,43 @@
 </div>
 <footer id="section5" align="center" class="container-fluid">
   <h1><u>Contact Me</u></h1>
+  <div id="commentMessage">
+      
+  </div>
+
+  <!-- add services interested in checkbox list -->
   <div class="flex-container">
     <div class="flex-item"> 
-      <form class="form-horizontal" id="commentForm">
+      <section class="form-horizontal" id="commentForm">
           <div class="form-group">
             <label class="control-label col-sm-2" for="name">First:</label>
-            <input id="commentFirstName" type="text" name="name" class="small col-sm-8" required>
+            <input id="commentFirstName" type="text" name="name" class="medium col-sm-8">
           </div>
           <div class="form-group">
             <label class="control-label col-sm-2" for="name">Last:</label>
-            <input id="commentLastName" type="text" name="name" class="small col-sm-8" required>
+            <input id="commentLastName" type="text" name="name" class="medium col-sm-8">
           </div>
           <div class="form-group">
             <label class="control-label col-sm-2" for="email">Email:</label>
-            <input id="commentEmail" type="email" name="email" class="small col-sm-8" required>
+            <input id="commentEmail" type="email" name="email" class="medium col-sm-8">
           </div>
           <div class="form-group">
             <label class="control-label col-sm-2" for="comment">Text:</label>
-            <textarea id="comment" name="comment" rows="5" cols="40" class="col-sm-8"></textarea>
+            <textarea id="comment" name="comment" rows="10" cols="40" class="col-sm-8"></textarea>
           </div>
           <div class="form-group">
             <div class="col-sm-offset-2 col-sm-10">
               <button id="btnComment" class="btn btn-success">Submit</button>
             </div>
           </div>
-      </form> 
+        </section> 
     </div>
     <div class="flex-item">
         <address>
             <strong>ohyesnoyes llc</strong><br>
               Boise, ID<br>
               (555) 555-5555<br>
-              <a href="mailto:admin@ohyesnoyes.com" style="color:orange;text-decoration: none;">admin@ohyesnoyes.com</a><br>
+              <a href="mailto:admin@ohyesnoyes.com" style="color:goldenrod; text-decoration: none;font-weight: bold;">admin@ohyesnoyes.com</a><br>
             </address>
         <div class="btn-group-vertical">
             <a type="button" class="btn btn-primary" href="http://linkedin.com/in/jeremymnoyes" target="_blank">

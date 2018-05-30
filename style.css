@@ -8,6 +8,11 @@ label {
 
 input, textarea {
     color:#000;
+    border-radius: 5px;
+}
+
+.navbar-default {
+    background-color: #ddd;
 }
 
 #section1 {padding-top:75px;height:inherit;color: #eee; background-color: #183170;}
@@ -58,42 +63,61 @@ input, textarea {
     color:#5C6376;
     text-decoration: none;
 }
-  
-.btn-danger {
-    background-color:darkred;
-}
 
 .btn-group-vertical {
     width:250px;
+    
 }
 
-.carousel-inner > .item > img,
-  .carousel-inner > .item > a > img {
-      width: 70%;
-      margin: auto;
-  }
+.card-img-top {
+    max-width: 38rem;
+    margin:5px;
+    border-radius: 5px;
+}
 
-  .carousel-caption {
-    background-color: #2E4172;
-    border-radius: 10px;
-  }
-  
+.card {
+    height: 525px;
+    max-width: 40rem;
+}
+.card-link, .card-link:hover {
+    text-decoration: none;
+    color: #ddd;
+}
+
 @media only screen and (max-width: 600px) {
-    .carouselImage{
-        visibility: visible;
+    .card{
+        max-width:300px;
     }
 
-    .carousel-caption p{
-        display: none;
-      }
-    .carouselBtn {
-        display: block;
+    .card-img-top{
+        max-width: 275px;
     }
 }
 
 footer {
-    
+    font-size: medium; 
     padding-top:50px;
     height:inherit;
     color: #eee; 
-    background-color: #444;}
+    background-color: #444;
+}
+    
+
+address {
+    background-color: #666;
+    color:444;
+    font-size: large;
+    border-radius: 5px;
+    padding: 10px;
+    border-style: groove;
+    border-color: #777;
+    border-width: 5px;
+}
+
+/* .success {
+    background-color: lightseagreen;
+    color: white;
+    width: 200px;
+    padding: 10px;
+    font-weight: bold;
+} */
